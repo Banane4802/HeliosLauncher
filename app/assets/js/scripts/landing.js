@@ -130,7 +130,7 @@ function updateSelectedAccount(authUser){
             username = authUser.displayName
         }
         if(authUser.uuid != null){
-            document.getElementById('avatarContainer').style.backgroundImage = `url('https://mc-heads.net/body/${authUser.uuid}/right')`
+            document.getElementById('avatarContainer').style.backgroundImage = `url('https://crafatar.com/renders/head/${accounts[i].uuid}?scale=2&amp;default=MHF_Steve&amp;overlay')`
         }
     }
     user_text.innerHTML = username
@@ -220,14 +220,14 @@ const refreshServerStatus = async function(fade = false){
     loggerLanding.log('Refreshing Server Status')
     const serv = DistroManager.getDistribution().getServer(ConfigManager.getSelectedServer())
 
-    let pLabel = 'SERVER'
-    let pVal = 'OFFLINE'
+    let pLabel = 'Server'
+    let pVal = 'Hors-Ligne'
 
     try {
         const serverURL = new URL('my://' + serv.getAddress())
         const servStat = await ServerStatus.getStatus(serverURL.hostname, serverURL.port)
         if(servStat.online){
-            pLabel = 'PLAYERS'
+            pLabel = 'Joueurs'
             pVal = servStat.onlinePlayers + '/' + servStat.maxPlayers
         }
 
@@ -862,8 +862,8 @@ let newsLoadingListener = null
  */
 function setNewsLoading(val){
     if(val){
-        const nLStr = 'Checking for News'
-        let dotStr = '..'
+        const nLStr = 'Vérificaions des actualitées'
+        let dotStr = '...'
         nELoadSpan.innerHTML = nLStr + dotStr
         newsLoadingListener = setInterval(() => {
             if(dotStr.length >= 3){

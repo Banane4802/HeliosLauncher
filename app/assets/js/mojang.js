@@ -19,13 +19,13 @@ const statuses = [
     {
         service: 'session.minecraft.net',
         status: 'grey',
-        name: 'Multiplayer Session Service',
+        name: 'Service de session multijoueur',
         essential: true
     },
     {
         service: 'authserver.mojang.com',
         status: 'grey',
-        name: 'Authentication Service',
+        name: 'Service de connection',
         essential: true
     },
     {
@@ -37,7 +37,7 @@ const statuses = [
     {
         service: 'api.mojang.com',
         status: 'grey',
-        name: 'Public API',
+        name: 'API publique',
         essential: false
     },
     {
@@ -49,7 +49,7 @@ const statuses = [
     {
         service: 'account.mojang.com',
         status: 'grey',
-        name: 'Mojang Accounts Website',
+        name: 'Site Web des comptes Mojang',
         essential: false
     }
 ]
